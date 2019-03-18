@@ -22,8 +22,7 @@ class CreateHistoricsTable extends Migration
             $table->double('saldo_anterior', 10, 2);
             $table->double('saldo_atual', 10, 2);
             $table->integer('user_id_transaction')->nullable();
-            $table->date('data');
-            $table->timestamp();
+            $table->timestamp('data');
         });
     }
 
