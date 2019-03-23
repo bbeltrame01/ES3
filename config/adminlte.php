@@ -123,7 +123,7 @@ return [
                     'icon' => 'wallet',
                 ],
                 [
-                    'text' => 'Cartão de Crédito',
+                    'text' => 'Cartões',
                     'url'  => '#',
                     'icon' => 'credit-card',
                 ],

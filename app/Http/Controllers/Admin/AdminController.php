@@ -9,6 +9,12 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('admin.home.index');
+        //dd(auth()->user()->balance->saldo);
+        $balance = auth()->user()->balance;
+        $amount    = $balance ? $balance->saldo : 0; 
+        $number = number_format($amount,2,'.',''); // Converte em 0.00
+        $decimal = (int)(( $number - (int)$number ) * 100);  // Pega apenas os decimais .00 
+
+        return view('admin.home.index', compact('amount'), compact('decimal'));
     }
 }

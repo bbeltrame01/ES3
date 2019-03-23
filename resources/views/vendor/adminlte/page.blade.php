@@ -52,9 +52,6 @@
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                 <span class="sr-only">{{ trans('adminlte::adminlte.toggle_navigation') }}</span>
                 <i class="fa fa-bars"></i>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
                 </a>
             @endif
                 <!-- Navbar Right Menu -->

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@yield('title_prefix', config('adminlte.title_prefix', ''))
-@yield('title', config('adminlte.title', 'AdminLTE 2'))
+@yield('title', config('adminlte.title', 'MyPocket'))
 @yield('title_postfix', config('adminlte.title_postfix', ''))</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="{{ asset('../vendor/components/font-awesome/css/fontawesome-all.min.css') }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/vendor/Ionicons/css/ionicons.min.css') }}">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- Float Action Button -->
+    <link rel="stylesheet" href="{{ asset('vendor/adminlte/css/float-button.css') }}">
+
+    
+
 
     @if(config('adminlte.plugins.select2'))
         <!-- Select2 -->
@@ -45,6 +52,7 @@
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('vendor/adminlte/dist/js/float-button.js') }}"></script>
 
 @if(config('adminlte.plugins.select2'))
     <!-- Select2 -->

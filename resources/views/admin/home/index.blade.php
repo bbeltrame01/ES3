@@ -4,6 +4,8 @@
 
 @section('content_header')
 <link rel="icon" type="imagem/png" href="../media/icon-mypocket.png" />
+<link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
+<link href="" rel="stylesheet" type="text/css">
 @stop
 
 @section('content')
@@ -14,7 +16,9 @@
         <!-- small box -->
         <div class="small-box bg-blue">
           <div class="inner">
-            <h3>R$ 150<sup style="font-size: 20px">,00</sup></h3>
+            <h3>R${{(int)$amount}}<sup style="font-size: 20px">,{{
+              str_pad($decimal, 2,'0')
+            }}</sup></h3>
 
             <p>Saldo Atual</p>
           </div>
@@ -240,9 +244,28 @@
         <!-- /.col (RIGHT) -->
     </div>
     <!-- /.row -->
-    
+
+    <!--input id="customBox" class="customBox" type="checkbox" />
+  <label for="customBox"style="
+  width: 40px;
+  height: 40px;"></label>
+ 
+  <div class="one fas fa-pen-square"></div>
+  <div class="two fas fa-star"></div>
+  <div class="three fas fa-share"></div-->
+<div id="main" class="fas fa-pen">
+
+</div>
+<div id="c1" data-toggle="tooltip" title="Renda" class="fas fa-hand-holding-usd">
+    <a href="#" ></a>
+</div>
+<div id="c2" data-toggle="tooltip" title="Gasto" class="fas fa-hand-holding-usd">
+    <a href="#" ></a>
+</div>
+<div id="c3" data-toggle="tooltip" title="Transferência" class="fas fa-hand-holding-usd">
+    <a href="#" ></a>
+</div>
+      
+  
 </section>
-
-
-
 @stop
