@@ -2,33 +2,11 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Title
-    |--------------------------------------------------------------------------
-    |
-    | The default title of your admin panel, this goes into the title tag
-    | of your page. You can override it per page with the title section.
-    | You can optionally also specify a title prefix and/or postfix.
-    |
-    */
-
     'title' =>  'MyPocket',
 
     'title_prefix' => '',
 
     'title_postfix' => ' - Sistema de Gerenciamento Financeiro',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Logo
-    |--------------------------------------------------------------------------
-    |
-    | This logo is displayed at the upper left corner of your admin panel.
-    | You can use basic HTML here if you want. The logo has also a mini
-    | variant, used for the mini side bar. Make it 3 letters or so
-    |
-    */
 
     'logo' => '<b>My</b>Pocket',
 
@@ -45,7 +23,7 @@ return [
     |
     */
 
-    'skin' => 'green-light',
+    'skin' => 'blue-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -73,18 +51,6 @@ return [
 
     'collapse_sidebar' => false,
 
-    /*
-    |--------------------------------------------------------------------------
-    | URLs
-    |--------------------------------------------------------------------------
-    |
-    | Register here your dashboard, logout, login and register URLs. The
-    | logout URL automatically sends a POST request in Laravel 5.3 or higher.
-    | You can set the request to a GET or POST with logout_method.
-    | Set register_url to null if you don't want a register link.
-    |
-    */
-
     'dashboard_url' => 'dashboard',
 
     'logout_url' => 'logout',
@@ -94,18 +60,6 @@ return [
     'login_url' => 'login',
 
     'register_url' => 'register',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Menu Items
-    |--------------------------------------------------------------------------
-    |
-    | Specify your menu items to display in the left sidebar. Each menu item
-    | should have a text and and a URL. You can also specify an icon from
-    | Font Awesome. A string instead of an array represents a header in sidebar
-    | layout. The 'can' is a filter on Laravel's built in Gate functionality.
-    |
-    */
 
     'menu' => [
         [
@@ -119,12 +73,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Contas',
-                    'url'  => '#',
+                    'url'  => 'register/account',
                     'icon' => 'wallet',
                 ],
                 [
                     'text' => 'Cartões',
-                    'url'  => '#',
+                    'url'  => 'register/card',
                     'icon' => 'credit-card',
                 ],
             ],
@@ -135,17 +89,17 @@ return [
             'submenu' => [
                 [
                     'text' => 'Gastos',
-                    'url'  => 'movement',
+                    'url'  => 'movement/spent',
                     'icon' => 'hand-holding-usd',
                 ],
                 [
                     'text'    => 'Renda',
-                    'url'     => '#',
+                    'url'     => 'movement/income',
                     'icon' => 'hand-holding-usd',
                 ],
                 [
                     'text' => 'Transferência',
-                    'url'  => '#',
+                    'url'  => 'movement/transfer',
                     'icon' => 'hand-holding-usd',
                 ],
             ],
@@ -156,19 +110,19 @@ return [
             'submenu' => [
                 [
                     'text' => 'Compras',
-                    'url'  => '#',
+                    'url'  => 'receipt/buy',
                     'icon' => 'shopping-cart',
                 ],
                 [
                     'text' => 'Renda',
-                    'url'  => '#',
+                    'url'  => 'receipt/income',
                     'icon' => 'file-invoice-dollar',
                 ],
             ],
         ],
         [
             'text' => 'Metas',
-            'url' => '#',
+            'url' => 'objective',
             'icon' => 'trophy',
         ],
         [
@@ -177,34 +131,32 @@ return [
             'submenu' => [
                 [
                     'text' => 'Extrato',
-                    'url'  => '#',
                     'icon' => 'file-alt',
                     'submenu' => [
                         [
                         'text'=>'Contas',
-                        'url' =>'#',
+                        'url' =>'report/extract/account',
                         'icon' => 'wallet',
                     ],
                     [
                         'text' => 'Cartão de Crédito',
-                        'url' => '#',
+                        'url' => 'report/extract/card',
                         'icon' => 'credit-card',
                     ],
                 ],
                 ],
                 [
                     'text' => 'Movimentos',
-                    'url'  => '#',
                     'icon' => 'file-medical-alt',
                     'submenu' => [
                         [
                         'text'=>'Despesas X Receitas',
-                        'url' =>'#',
+                        'url' =>'report/movements/balance',
                         'icon' => 'balance-scale',
                     ],
                     [
                         'text' => 'Lançamentos',
-                        'url' => '#',
+                        'url' => 'report/movements/releases',
                         'icon' => 'exchange-alt',
                     ],
                 ],

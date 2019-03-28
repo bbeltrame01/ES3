@@ -1,12 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Gastos')
+@section('title', 'Comprovantes')
 
 @section('content_header')
-    <h1>Gastos</h1>
-    <ol class="breadcrump">
-        <li><a href="">Dashboard</a></li>
-    </ol>
+    <h1>Comprovante de Compras</h1>
 @stop
 
 @section('content')

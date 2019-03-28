@@ -245,26 +245,6 @@
     </div>
     <!-- /.row -->
 
-    <!--input id="customBox" class="customBox" type="checkbox" />
-  <label for="customBox"style="
-  width: 40px;
-  height: 40px;"></label>
- 
-  <div class="one fas fa-pen-square"></div>
-  <div class="two fas fa-star"></div>
-  <div class="three fas fa-share"></div-->
-<div id="main" class="fas fa-pen">
-
-</div>
-<div id="c1" data-toggle="tooltip" title="Renda" class="fas fa-hand-holding-usd">
-    <a href="#" ></a>
-</div>
-<div id="c2" data-toggle="tooltip" title="Gasto" class="fas fa-hand-holding-usd">
-    <a href="#" ></a>
-</div>
-<div id="c3" data-toggle="tooltip" title="Transferência" class="fas fa-hand-holding-usd">
-    <a href="#" ></a>
-</div>
       
   
 </section>

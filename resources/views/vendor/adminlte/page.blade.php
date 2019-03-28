@@ -23,7 +23,7 @@
                 <div class="container">
                     <div class="navbar-header">
                         <a href="{{ url(config('adminlte.dashboard_url', 'home')) }}" class="navbar-brand">
-                            {!! config('adminlte.logo', '<b>Admin</b>LTE') !!}
+                            {!! config('adminlte.logo', '<b>My</b>Pocket') !!}
                         </a>
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
                             <i class="fa fa-bars"></i>
@@ -157,6 +157,19 @@
 
     </div>
     <!-- ./wrapper -->
+    <!-- FLOAT ACTION BUTTON -->
+    <div id="main" class="fas fa-pen">
+    </div>
+    <div id="c1" data-toggle="tooltip" title="Renda" class="fas fa-hand-holding-usd">
+      <a href="{{ route('movement.new_movement') }}" ></a>
+    </div>
+    <div id="c2" data-toggle="tooltip" title="Gasto" class="fas fa-hand-holding-usd">
+        <a href="#" ></a>
+    </div>
+    <div id="c3" data-toggle="tooltip" title="Transferência" class="fas fa-hand-holding-usd">
+        <a href="#" ></a>
+    </div>
+    <!-- ./FLOAT ACTION BUTTON -->
 @stop
 
 @section('adminlte_js')

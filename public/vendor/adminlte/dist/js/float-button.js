@@ -9,12 +9,12 @@ $(document).ready(function(){
             $("#c1").animate({height:'40px',width:'40px'},150);
             $("#c1 img").delay(500).fadeIn(100);
 
-            $("#c2").animate({top:'84.7%',left:'92.1%'},175);
-            $("#c2").animate({height:'40px',width:'40px'},175);
+            $("#c2").animate({top:'84.7%',left:'92.1%'},150);
+            $("#c2").animate({height:'40px',width:'40px'},150);
             $("#c2 img").delay(500).fadeIn(100);
 
-            $("#c3").animate({top:'90%',left:'90.5%'},200);
-            $("#c3").animate({height:'40px',width:'40px'},200);
+            $("#c3").animate({top:'90%',left:'90.5%'},150);
+            $("#c3").animate({height:'40px',width:'40px'},150);
             $("#c3 img").delay(500).fadeIn(100);
 
             $("#main").css("background-image","url('cancel.png')");
