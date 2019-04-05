@@ -20,7 +20,7 @@
               str_pad($decimal, 2,'0')
             }}</sup></h3>
 
-            <p>Saldo Atual</p>
+            <p>Saldo Total</p>
           </div>
           <div class="icon">
             <i class="ion ion-social-usd"></i>
@@ -35,7 +35,7 @@
           <div class="inner">
             <h3>R$200<sup style="font-size: 20px">,00</sup></h3>
 
-            <p>Total Renda</p>
+            <p>Renda Fixa</p>
           </div>
           <div class="icon">
             <i class="ion ion-arrow-graph-up-right"></i>
@@ -50,7 +50,7 @@
           <div class="inner">
             <h3>R$50<sup style="font-size: 20px">,00</sup></h3>
 
-            <p>Total Gastos</p>
+            <p>Gasto fixo</p>
           </div>
           <div class="icon">
             <i class="ion ion-arrow-graph-down-right"></i>
@@ -188,16 +188,10 @@
             <div class="box box-primary">
                 <div class="box-header">
                 <h3 class="box-title">Últimos Registros</h3>
-                
-        
-                <div class="box-tools">
-                    <ul class="pagination pagination-sm no-margin pull-right">
-                    <li><a href="#">«</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">»</a></li>
-                    </ul>
+                <div class="box-tools pull-right">
+                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                  </button>
+                  <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                 </div>
                 </div>
                 <!-- /.box-header -->

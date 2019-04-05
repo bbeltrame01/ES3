@@ -17,4 +17,10 @@ class AdminController extends Controller
 
         return view('admin.home.index', compact('amount'), compact('decimal'));
     }
+    public function settings()
+    {
+        $name = auth()->user()->name;
+
+        return view('admin.settings.index', compact('name'));
+    }
 }

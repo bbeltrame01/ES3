@@ -15,4 +15,12 @@ class RegisterController extends Controller
     {
         return view('admin.register.card');
     }
+    public function new_account()
+    {
+        return view('admin.register.new.new_account');
+    }
+    public function new_card()
+    {
+        return view('admin.register.new.new_card');
+    }
 }

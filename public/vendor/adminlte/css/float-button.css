@@ -1,7 +1,7 @@
 #main {
   height: 56px;
   width: 56px;
-  background-color: #0073b7;
+  background-color: #605ca8;
   box-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
   border-radius: 50%;
   position: fixed;
@@ -17,7 +17,7 @@
 
 #main:hover {
   cursor: pointer;
-  background-color: #337ab7;
+  background-color: #555299;
 }
 
 #c1, #c2, #c3 {
