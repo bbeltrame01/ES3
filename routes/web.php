@@ -15,6 +15,7 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Admin'], function(){
     Route::get('movement/spent', 'MovementController@spent')->name('movement.spent');
     Route::get('receipt/income', 'ReceiptController@income')->name('receipt.income');
     Route::get('receipt/buy', 'ReceiptController@buy')->name('receipt.buy');
+    Route::post('upload_buy', ['as' => 'files.upload.buy', 'uses' => 'ReceiptController@upload_buy']);
     Route::get('objective', 'ObjectiveController@index')->name('objective');
     Route::get('report/extract/account', 'ReportController@account')->name('report.extract.account');
     Route::get('report/extract/card', 'ReportController@card')->name('report.extract.card');
