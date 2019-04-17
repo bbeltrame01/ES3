@@ -30,6 +30,21 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading"></div>
+            <div class="list-files">
+                <?php
+                    foreach ($files as $key => $file) { ?>
+                        <div class="block-file">
+                            <img width="250px" src="<?php echo "/uploads/" . $file->name; ?>" />
+                        </div>
+                    <?php }
+                ?>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
 

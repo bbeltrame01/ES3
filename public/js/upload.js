@@ -16,21 +16,12 @@ $(document).ready(function() {
             processData: false,
             contentType: false,
             headers: {"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr('content')},
-            xhr: function() {
-                var myXhr = $.ajaxSettings.xhr();
-                if(myXhr.upload){
-                    myXhr.upload.addEventListener('progress', progress, false);
-                }
-                return myXhr;
-            },
             success: function(data) {
                 if(data.success) {
                     $(".msg_upload").append("<span style='color: green;'>" + data.message + "</span>").fadeIn();
                 } else {
                     $(".msg_upload").append("<span style='color: red;'>" + data.message + "</span>").fadeIn();
                 }
-
-                $(".progress .progress-bar").css("width", "0%").find("> span").text("");
 
                 setTimeout(function() {
                     $(".msg_upload").html("").fadeOut();

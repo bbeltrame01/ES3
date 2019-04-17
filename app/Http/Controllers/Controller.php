@@ -13,7 +13,7 @@ class Controller extends BaseController
 
     public function homepage()
     {
-        $variavel = "Homepage";
+        $variavel = "Bem-vindo";
         return view('welcome',[
             'title' => $variavel
         ]);

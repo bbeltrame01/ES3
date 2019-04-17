@@ -21,6 +21,7 @@
     <!-- Bower Components Upload -->
     <link rel="stylesheet" href="{{ asset('bower_components/blueimp-file-upload/css/jquery.fileupload.css') }}"/>
 
+
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     
@@ -60,6 +61,10 @@
 <script src="{{ asset('bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js') }}"></script>
 <script src="{{ asset('bower_components/blueimp-file-upload/js/jquery.fileupload.js') }}"></script>
 <script src="{{ asset('js/upload.js') }}"></script>
+<script src="{{ asset('assets/js/browser.min.js') }}"></script>
+<script src="{{ asset('assets/js/breakpoint.min.js') }}"></script>
+<script src="{{ asset('assets/js/util.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
 
 @if(config('adminlte.plugins.select2'))
     <!-- Select2 -->

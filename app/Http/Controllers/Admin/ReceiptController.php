@@ -10,12 +10,15 @@ class ReceiptController extends Controller
 {
     public function buy()
     {
-        return view('admin.receipt.buy');
+        $files = File::orderBy('created_at', 'DESC')->paginate(30);
+        return view('admin.receipt.buy', ["files" => $files]);
     }
     public function income()
     {
         return view('admin.receipt.income');
     }
+
+
     public function upload_buy()
     {
         $path = public_path() . "\\uploads\\";
@@ -23,18 +26,19 @@ class ReceiptController extends Controller
         $ext = pathinfo($file_name, PATHINFO_EXTENSION);
         $file_name = explode(".", $file_name);
         $file_name = $file_name[0];
-        $target_file = $path . basename($file_name) . "_" . md5(time()) . "." . $ext;
+        $file_name_to_save = basename($file_name) . "_" . md5(time()) . "." . $ext;
+        $target_file = $path . $file_name_to_save;
 
         if (move_uploaded_file($_FILES["fileUpload"]["tmp_name"], $target_file)) {
             $data = new \App\File();
-            $data->name = $target_file;
+            $data->name = $file_name_to_save;
             $data->user_id = \Auth::user()->id;
             $data->save();
 
-            echo json_encode(array("success" => true, "message" => "The file '". basename( $_FILES["fileUpload"]["name"]). "' has been uploaded."));
+            echo json_encode(array("success" => true, "message" => "O  arquivo '". basename( $_FILES["fileUpload"]["name"]). "' foi carregado com sucesso."));
             die();
         } else {
-            echo json_encode(array("success" => false, "message" => "Sorry, there was an error uploading your file."));
+            echo json_encode(array("success" => false, "message" => "Ops, ocorreu algum problema ao carregar o arquivo."));
             die();
         }
     }

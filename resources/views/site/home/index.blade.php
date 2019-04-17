@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>My Pocket</title>
+
+        <!-- Página Inicial -->
+        <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/css/noscript.css') }}"/>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -18,6 +22,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                z-index: 999;
             }
 
             .full-height {
@@ -61,39 +66,43 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
-        </style>
+        </style>        
     </head>
-    <body>
+    <body class="is-preload">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/dashboard') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Cadastre-se</a>
                         @endif
                     @endauth
                 </div>
             @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+        <div class="wrapper">
+            <header id="header">
+                <div class="logo">
+                    <span class="icon fa-dollar"></span>
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="content">
+                    <div class="inner">
+                        <h1>My Pocket</h1>
+                        <p>Um sistema simples e intuitivo, criado para facilitar a gestão financeira de seu dia a dia.<br />
+                        Comece agora mesmo, <a href="{{ route('register') }}">Cadastre-se</a></p>
+                    </div>
                 </div>
-            </div>
+            </header>
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Powered by: BRUNO BELTRAME.</p>
+            </footer>
         </div>
+        <!-- BG -->
+        <div id="bg"></div>
     </body>
 </html>
+
