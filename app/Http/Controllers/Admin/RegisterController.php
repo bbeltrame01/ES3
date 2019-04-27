@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Register;
 
 class RegisterController extends Controller
 {
@@ -22,5 +23,9 @@ class RegisterController extends Controller
     public function new_card()
     {
         return view('admin.register.new.new_card');
+    }
+    public function new_accountRegister(Request $request, Register $register)
+    {
+        $register->register($request->account_name);
     }
 }

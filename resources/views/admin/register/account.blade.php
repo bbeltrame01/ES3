@@ -129,7 +129,7 @@
     <!-- /.info-box -->
   </div>
       <div class="col-md-3">
-        <button type="button" class="btn btn-block btn-default btn-lg" style="padding: 33px">+</button>
+        <a href="{{ route('register.new_account') }}" type="button" class="btn btn-block btn-default btn-lg" style="padding: 33px">+</a>
       </div>
 </div>
 

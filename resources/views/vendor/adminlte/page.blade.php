@@ -103,7 +103,7 @@
                             @endif
                         </li>
                         <li>
-                            <a href="{{ route('admin.settings') }}" data-toggle="control-sidebar"><i class="fa fa-cog"></i></a>
+                            <a href="{{ route('admin.settings') }}" role="button"><i class="fa fa-cog"></i></a>
                         </li>
                     </ul>
                 </div>

@@ -18,7 +18,7 @@ class CreateAccountTable extends Migration
             $table->string('nome');
             $table->integer('numero');
             $table->enum('tipo',['D','C','P']);
-            $table->double('saldo',10,2);
+            $table->double('saldo',10,2)->default(0);
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

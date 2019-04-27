@@ -9,6 +9,7 @@ Route::group(['middleware' => ['auth'], 'namespace' => 'Admin'], function(){
     Route::get('register/card/new', 'RegisterController@new_card')->name('register.new_card');
     Route::get('register/account', 'RegisterController@account')->name('register.account');
     Route::get('register/account/new', 'RegisterController@new_account')->name('register.new_account');
+    Route::post('new_account', 'RegisterController@new_accountRegister')->name('new_account.register');
     Route::get('movement/new', 'MovementController@new_movement')->name('movement.new_movement');
     Route::get('movement/transfer', 'MovementController@transfer')->name('movement.transfer');
     Route::get('movement/income','MovementController@income')->name('movement.income');
